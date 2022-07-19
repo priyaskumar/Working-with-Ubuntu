@@ -81,13 +81,13 @@
         defaultBranch = ""
     ```
 
-- ### _*STEP 6*_ : Create the directory clients/git/< some foldername> in home
+- ### _*STEP 7*_ : Create the directory clients/git/< some foldername> in home
 
     ```
     mkdir -p clients/git/<some folder name> 
     ```
 
-- ### _*STEP 7*_ : Open gitconfig.< ssh key file name> from the above directory 
+- ### _*STEP 8*_ : Open gitconfig.< ssh key file name> from the above directory 
 
     ```
     code gitconfig.<ssh key file name>
@@ -103,27 +103,27 @@
     [github]
     user = <github username>
 
-- ### _*STEP 8*_ : Copy the the public ssh key and add it to your github acc 
+- ### _*STEP 9*_ : Copy the the public ssh key and add it to your github acc 
 
     ```
     cd ~/.ssh/github 
     cat <sshkey filename>.pub 
     ```
 
-- ### _*STEP 9*_ : Add the identity 
+- ### _*STEP 10*_ : Add the identity 
 
     ```
     ssh-add <ssh key filename> 
     ```
 
-- ### _*STEP 10*_ : Move to clients/git/< your foldername>; add known hosts
+- ### _*STEP 11*_ : Move to clients/git/< your foldername>; add known hosts
 
     ```
     cd ~/clients/git/<some folder name of ur choice>
     ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts 
     ```
 
-- ### _*STEP 11*_ : Try to Clone a repo 
+- ### _*STEP 12*_ : Try to Clone a repo 
 
     ```
     git clone git@github.com-<ssh key filename>:......git
